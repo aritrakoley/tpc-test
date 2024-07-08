@@ -19,7 +19,8 @@
     // Post the result back to the parent window
     setTimeout(() => {
       console.log('sent'); 
-      window.parent.postMessage(cookiesEnabled, "*")
+      // window.parent.postMessage(cookiesEnabled, "*")
+      window.parent.postMessage("Hello", "*")
     }, 2000);
   </script>
 </body>
