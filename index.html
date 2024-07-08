@@ -9,7 +9,8 @@
     document.cookie = "testCookie=testValue; path=/";
 
     // Check if the cookie was set
-    const cookiesEnabled = document.cookie.indexOf("testCookie=testValue") !== -1;
+    // const cookiesEnabled = document.cookie.indexOf("testCookie=testValue") !== -1;
+    const cookiesEnabled = document.cookie;
 
     // Post the result back to the parent window
     window.parent.postMessage(cookiesEnabled, "*");
