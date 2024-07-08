@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Set Third-Party Cookie</title>
+</head>
+<body>
+  <script>
+    // Set a cookie
+    document.cookie = "testCookie=testValue; path=/";
+
+    // Check if the cookie was set
+    const cookiesEnabled = document.cookie.indexOf("testCookie=testValue") !== -1;
+
+    // Post the result back to the parent window
+    window.parent.postMessage(cookiesEnabled, "*");
+  </script>
+</body>
+</html>
