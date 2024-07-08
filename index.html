@@ -16,7 +16,7 @@
     // const cookiesEnabled = document.cookie;
 
     // Post the result back to the parent window
-    window.parent.postMessage(cookiesEnabled, "*");
+    setTimeout(() => window.parent.postMessage(cookiesEnabled, "*"), 2000);
   </script>
 </body>
 </html>
