@@ -20,8 +20,8 @@
     setTimeout(() => {
       console.log('sent', cookiesEnabled); 
       // window.parent.postMessage(cookiesEnabled, "*")
-      window.parent.postMessage("Hello", "*")
-      window.parent.postMessage(cookiesEnabled, "*")
+      // window.parent.postMessage("Hello", "*")
+      window.parent.postMessage(cookiesEnabled ? 'cookiesEnabled' : 'cookiesDisabled', "*")
     }, 2000);
   </script>
 </body>
