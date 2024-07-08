@@ -6,12 +6,14 @@
 <body>
   <script>
     // Set a cookie
-    document.cookie = "testCookie=testValue1; path=/";
+    const value = "testValue1"
+    document.cookie = `testCookie=${value}; path=/`;
     console.log(document.cookie)
 
     // Check if the cookie was set
-    // const cookiesEnabled = document.cookie.indexOf("testCookie=testValue") !== -1;
-    const cookiesEnabled = document.cookie;
+    const cookiesEnabled = document.cookie.indexOf(`testCookie=${value}`) !== -1;
+    console.log({cookiesEnabled})
+    // const cookiesEnabled = document.cookie;
 
     // Post the result back to the parent window
     window.parent.postMessage(cookiesEnabled, "*");
